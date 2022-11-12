@@ -330,7 +330,7 @@ static void devapc_violation_triggered(uint32_t vio_idx,
 
 		/* Connsys will trigger EE instead of AP KE */
 		if (id != INFRA_SUBSYS_CONN)
-			BUG();
+              __WARN_printf( vio_master,device_info[vio_idx].device);
 	} else if (dbg_stat->enable_AEE) {
 
 		/* call mtk aee_kernel_exception */
